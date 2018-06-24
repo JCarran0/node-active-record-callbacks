@@ -132,7 +132,7 @@ describe('BaseModel', () => {
     test('multiple after update callbacks are called in series', async () => {
       const resolveOrder = [];
       function getTestPromise (i, time) {
-        return new Promise((resolve, reject) => {
+        return new Promise(( resolve ) => {
           setTimeout(() => {
             resolveOrder.push(i);
             debugger;
@@ -159,7 +159,9 @@ describe('BaseModel', () => {
             callback: this.doOneOtherThingAfterCallback
           });          
         }
-  
+        
+        // Making the first promise take longest to resolve will prove that
+        // a successful test is because calls are in series
         async doSomethingAfterCallback () {
           await getTestPromise(1, 400);
         }

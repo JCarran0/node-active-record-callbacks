@@ -18,7 +18,7 @@ class BaseModel {
       patch
     );
 
-    const x = await this.runAfterUpdateCallbacks(patch, options);
+    await this.runAfterUpdateCallbacks(patch, options);
     return result;
   }
 
