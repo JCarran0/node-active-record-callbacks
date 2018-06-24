@@ -1,0 +1,30 @@
+{
+  "name": "node-active-record-callbacks",
+  "version": "1.0.0",
+  "description": "A Rails-style active record callback pattern for Node",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCarran0/node-active-record-callbacks.git"
+  },
+  "keywords": [
+    "node",
+    "active",
+    "record",
+    "callbacks",
+    "rails"
+  ],
+  "author": "jared.carrano@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JCarran0/node-active-record-callbacks/issues"
+  },
+  "homepage": "https://github.com/JCarran0/node-active-record-callbacks#readme"
+}
