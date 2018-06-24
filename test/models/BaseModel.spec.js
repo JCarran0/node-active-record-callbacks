@@ -120,6 +120,13 @@ describe('BaseModel', () => {
       await child.update(testPatch, testOptions);
 
       expect(afterUpdateCallbackSpy.mock.calls.length).toBe(3);
+
+      const calls = afterUpdateCallbackSpy.mock.calls;
+
+      calls.forEach((call) => {
+        expect(call[0]).toBe( testPatch );
+        expect(call[1]).toBe( testOptions );
+      });
     }) 
     
     test('multiple after update callbacks are called in series', async () => {
